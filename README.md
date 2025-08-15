@@ -100,13 +100,7 @@ Lasso Regression	0.15	0.03	0.13
 Key Insight: Linear & Ridge Regression performed best with R² = 0.47, explaining ~47% of the variance in humidity.
 
 🚀 How to Run
-
-Clone the repository
-
-git clone <repo-url>
-cd <repo-folder>
-
-
+git:https://github.com/nikitaphartiyal/regression.git
 Install dependencies
 
 pip install numpy pandas matplotlib seaborn scikit-learn
