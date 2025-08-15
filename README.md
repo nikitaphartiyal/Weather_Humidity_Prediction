@@ -1,13 +1,17 @@
-# linear-regression-
-Overview---
-This project analyzes a dataset of 96,453 hourly weather observations with 12 features, focusing on predicting humidity levels based on other weather parameters. The dataset includes various weather measurements like temperature, wind speed, pressure, and more.
+Linear Regression - Weather Humidity Prediction
+📌 Overview
 
-Dataset Description--
-Rows: 96,453 hourly weather observations
+This project analyzes 96,453 hourly weather observations across 12 features, focusing on predicting humidity levels based on other weather parameters.
+The dataset includes temperature, wind speed, pressure, and other meteorological measurements.
+
+📊 Dataset Description
+
+Rows: 96,453 hourly observations
 
 Columns: 12 weather-related features
 
-Key Features:
+Key Features
+
 Temporal: Formatted Date (timestamp)
 
 Weather Conditions:
@@ -22,7 +26,7 @@ Temperature (C)
 
 Apparent Temperature (C)
 
-Humidity (0-1 scale)
+Humidity (0–1 scale)
 
 Wind Speed (km/h)
 
@@ -38,37 +42,39 @@ Loud Cover (all zeros - potentially droppable)
 
 Daily Summary (text description)
 
-Data Preprocessing--
-Handled missing values in 'Precip Type' column (517 null values)
+🛠 Data Preprocessing
 
-Replaced nulls based on humidity and temperature conditions
+Handled missing values in Precip Type (517 nulls)
 
-Filled remaining nulls with the mode (most frequent value)
+Filled based on humidity and temperature conditions
+
+Remaining nulls filled with mode value
 
 Dropped irrelevant columns for modeling:
 
 Formatted Date
 
-Summary--
+Summary
 
 Precip Type
 
 Daily Summary
 
-Exploratory Data Analysis
+📈 Exploratory Data Analysis
+
 Visualized distribution of weather summaries and precipitation types
 
 Created pie charts for top daily summaries
 
 Analyzed relationships between:
 
-Temperature and Humidity
+Temperature vs Humidity
 
-Humidity and Apparent Temperature
+Humidity vs Apparent Temperature
 
-Modeling Approach
+🤖 Modeling Approach
+
 Target Variable: Humidity
-
 Features Used:
 
 Temperature (C)
@@ -85,48 +91,42 @@ Loud Cover
 
 Pressure (millibars)
 
-Models Implemented:--
-Linear Regression
+Models Implemented & Performance
+Model	MAE	MSE	R²
+Linear Regression	0.11	0.02	0.47
+Ridge Regression	0.11	0.02	0.47
+Lasso Regression	0.15	0.03	0.13
 
-MAE: 0.11
+Key Insight: Linear & Ridge Regression performed best with R² = 0.47, explaining ~47% of the variance in humidity.
 
-MSE: 0.02
+🚀 How to Run
 
-R²: 0.47
-
-Ridge Regression
-
-MAE: 0.11
-
-MSE: 0.02
-
-R²: 0.47
-
-Lasso Regression
-
-MAE: 0.15
-
-MSE: 0.03
-
-R²: 0.13
-
-Results--
-Linear and Ridge Regression performed similarly with R² of 0.47
-
-Lasso Regression had lower performance (R² of 0.13)
-
-The best model can explain about 47% of variance in humidity levels
-
-How to Run
 Clone the repository
 
-Install required packages:
+git clone <repo-url>
+cd <repo-folder>
 
-text
+
+Install dependencies
+
 pip install numpy pandas matplotlib seaborn scikit-learn
-Run the Jupyter notebook or Python script
 
-Dependencies
+
+Run the project
+
+Jupyter Notebook:
+
+jupyter notebook
+
+
+Open the project .ipynb file and run all cells.
+
+Python Script:
+
+python main.py
+
+📦 Dependencies
+
 Python 3.x
 
 NumPy
@@ -139,11 +139,12 @@ Seaborn
 
 Scikit-learn
 
-Future Work
-Experiment with more complex models
+🔮 Future Work
 
-Include time-series analysis
+Experiment with more complex models (Random Forest, XGBoost, etc.)
 
-Feature engineering with datetime features
+Apply time-series analysis
 
-Hyperparameter tuning for better performance
+Engineer features from datetime components (month, season, etc.)
+
+Perform hyperparameter tuning for improved performance
